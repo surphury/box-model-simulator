@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!-- fonts -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="title">Box Model Simulator</h1>
+    </header>
+    <main class="main">
+
+        <form class="form" id="form">
+            <fieldset class="fieldset">
+                <legend>Box styles</legend>
+                <div class="code" id="code">
+                    <label for="widthInput" class="label">width:</label>
+                    <input type="text" id="widthInput" class="input input--width" value="200px">
+
+                    <label for="heightInput" class="label">height:</label>
+                    <input type="text" id="heightInput" class="input input--height" value="200px">
+
+                    <label for="paddingInput" class="label">padding:</label>
+                    <input type="text" id="paddingInput" class="input input--padding" value="30px">
+
+                    <label for="borderInput" class="label">border:</label>
+                    <input type="text" id="borderInput" class="input input--border" value="20px">
+
+                    <label id="boxSizingLabel" for="boxSizing" class="label label--box-sizing">box-sizing:</label>
+                    <!-- <input type="checkbox" class="box-sizing-check" id="boxSizing" checked> -->
+                    <select id="boxSizing">
+                        <option value="content-box" selected>content-box</option>
+                        <option value="border-box">border-box</option>
+                    </select>
+                </div>
+            </fieldset>
+
+        </form>
+        <div class="container">
+            <div class="box content-box" id="box"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
