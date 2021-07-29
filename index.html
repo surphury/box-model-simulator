@@ -5,13 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Box Model Simulator</title>
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <!-- fonts -->
-    <link rel="stylesheet" href="style.css">
+    <!-- MetaDatas -->
+    <meta property='og:title' content='Box Model Simulator'>
+    <meta property='og:type' content='website'>
+    <meta property='og:image' content='assets/images/box-model.png'>
+    <meta property='og:url' content='surphury.github.io/box-model-simulator'>
+    <meta property='og:description' content='A box model simulator made in HTML, CSS, JS'>
+    <meta property='og:image:width' content='200px'>
+    <meta property='og:image:height' content='200px'>
+    <meta property='og:image:alt' content='Box Model'>
+    <!-- MetaDatas -->
+    <!-- favIcons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- favIcons -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/cleancss.css">
 </head>
 
 <body>
@@ -21,23 +51,23 @@
     <main class="main">
 
         <form class="form" id="form">
+            <span class="form__switcher"></span>
             <fieldset class="fieldset">
                 <legend>Box styles</legend>
                 <div class="code" id="code">
                     <label for="widthInput" class="label">width:</label>
-                    <input type="text" id="widthInput" class="input input--width" value="200px">
+                    <input id="widthInput" class="input input--width" value="200px">
 
                     <label for="heightInput" class="label">height:</label>
-                    <input type="text" id="heightInput" class="input input--height" value="200px">
+                    <input id="heightInput" class="input input--height" value="200px">
 
                     <label for="paddingInput" class="label">padding:</label>
-                    <input type="text" id="paddingInput" class="input input--padding" value="30px">
+                    <input id="paddingInput" class="input input--padding" value="30px">
 
                     <label for="borderInput" class="label">border:</label>
-                    <input type="text" id="borderInput" class="input input--border" value="20px">
+                    <input id="borderInput" class="input input--border" value="20px">
 
                     <label id="boxSizingLabel" for="boxSizing" class="label label--box-sizing">box-sizing:</label>
-                    <!-- <input type="checkbox" class="box-sizing-check" id="boxSizing" checked> -->
                     <select id="boxSizing">
                         <option value="content-box" selected>content-box</option>
                         <option value="border-box">border-box</option>
