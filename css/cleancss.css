@@ -35,6 +35,7 @@ select, option{
 }
 
 .form{
+    cursor: pointer;
     position: absolute;
     transition: transform .5s;
 }
@@ -71,10 +72,6 @@ select, option{
     width: var(--width);
     height:var(--height);
     padding:var(--padding);
-    /* border-top: ;
-    border-right: ;
-    border-bottom: ;
-    border-left: ; */
     border: var(--border-width) solid transparent;
     outline-offset: var(--outline-offset);
     margin:var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
