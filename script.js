@@ -40,4 +40,8 @@ const changeBoxModel = (e) => {
 }
 $code.addEventListener('change', changeBoxModel);
 $code.addEventListener('keydown', changeBoxModel);
-$form.addEventListener('click', () => $form.toggleAttribute('hidden'));
+
+$form.addEventListener('click', (e) => {
+    if (e.target.classList.contains('fieldset'))
+        $form.toggleAttribute('hidden')
+});
