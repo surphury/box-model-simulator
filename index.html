@@ -42,7 +42,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- favIcons -->
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/cleancss.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -50,9 +50,9 @@
         <h1 class="title">Box Model Simulator</h1>
     </header>
     <main class="main">
-
+        <!-- <div class="details">
+            <div class="summary">Styles</div> -->
         <form class="form" id="form">
-            <span class="form__switcher"></span>
             <fieldset class="fieldset">
                 <legend>Box styles</legend>
                 <div class="code" id="code">
@@ -61,9 +61,19 @@
 
                     <label for="heightInput" class="label">height:</label>
                     <input id="heightInput" class="input input--height" value="200px">
-
-                    <label for="paddingInput" class="label">padding:</label>
-                    <input id="paddingInput" class="input input--padding" value="30px">
+                    <fieldset class="fieldset--padding">
+                        <legend>Padding</legend>
+                        <div class="code">
+                            <label for="paddingTopInput" class="label">top:</label>
+                            <input type="text" id="paddingTopInput" class="input input--padding" value="30px">
+                            <label for="paddingRightInput" class="label">right:</label>
+                            <input type="text" id="paddingRightInput" class="input input--padding" value="30px">
+                            <label for="paddingBottomInput" class="label">bottom:</label>
+                            <input type="text" id="paddingBottomInput" class="input input--padding" value="30px">
+                            <label for="paddingLeftInput" class="label">left:</label>
+                            <input type="text" id="paddingLeftInput" class="input input--padding" value="30px">
+                        </div>
+                    </fieldset>
 
                     <label for="borderInput" class="label">border:</label>
                     <input id="borderInput" class="input input--border" value="20px">
@@ -73,14 +83,59 @@
                         <option value="content-box" selected>content-box</option>
                         <option value="border-box">border-box</option>
                     </select>
+                    <fieldset class="fieldset--margin">
+                        <legend>Margin</legend>
+                        <div class="code">
+                            <label for="marginInputTop" class="label">top:</label>
+                            <input type="text" id="marginInputTop" class="input input--margin" value="0">
+                            <label for="marginInputRight" class="label">right:</label>
+                            <input type="text" id="marginInputRight" class="input input--margin" value="0">
+                            <label for="marginInputBottom" class="label">bottom:</label>
+                            <input type="text" id="marginInputBottom" class="input input--margin" value="0">
+                            <label for="marginInputLeft" class="label">left:</label>
+                            <input type="text" id="marginInputLeft" class="input input--margin" value="0">
+                        </div>
+                    </fieldset>
+                    <div>
+                    </div>
                 </div>
             </fieldset>
-
         </form>
+        <!-- </div> -->
         <div class="container">
-            <div class="box content-box" id="box"></div>
+            <div class="box__margin box__margin--top"></div>
+            <div class="box__margin box__margin--right"></div>
+            <div class="box__margin box__margin--bottom"></div>
+            <div class="box__margin box__margin--left"></div>
+            <div class="box content-box" id="box">
+            </div>
         </div>
     </main>
+    <footer class="footer">
+        <p class="footer__credits">Created by <a rel="author" href="https://www.github.com/surphury">Surphury</a></p>
+        <div class="container footer__container">
+            <div class="guide">
+                <span class="guide-box guide-box--content"></span>
+                <label class="guide-label ">Content</label>
+            </div>
+            <div class="guide">
+                <span class="guide-box guide-box--box-sizing"></span>
+                <label class="guide-label">Box-sizing</label>
+            </div>
+            <div class="guide">
+                <span class="guide-box guide-box--padding"></span>
+                <label class="guide-label">Padding</label>
+            </div>
+            <div class="guide">
+                <span class="guide-box guide-box--border"></span>
+                <label class="guide-label">Border</label>
+            </div>
+            <div class="guide">
+                <span class="guide-box guide-box--margin"></span>
+                <label class="guide-label">Margin</label>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
